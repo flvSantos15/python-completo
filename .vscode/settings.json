@@ -1,0 +1,18 @@
+{
+  "[html]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.formatOnType": true
+  },
+  "[django-html]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.formatOnType": true,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    }
+  }
+}
