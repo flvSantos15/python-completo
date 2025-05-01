@@ -16,8 +16,8 @@
 
   <div class="search">
     <form
-      action=""
-      method="get"
+      action="{% url 'contact:search' %}"
+      method="GET"
     >
       <input
         id="search"
@@ -25,6 +25,7 @@
         type="search"
         class="search-input"
         placeholder="Search..."
+        value="{{ request.GET.q.strip }}"
       >
     </form>
   </div>
