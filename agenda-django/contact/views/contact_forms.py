@@ -5,6 +5,9 @@ from django.core.paginator import Paginator
 
 # Create your views here.
 def create(request):
+  if request.method == 'POST':
+    pass
+
   context = {
 
   }
