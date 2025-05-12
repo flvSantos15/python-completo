@@ -1,12 +1,22 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from contact.forms import ContacForm
 
 # Create your views here.
 def create(request):
   if request.method == 'POST':
+    form = ContacForm(request.POST)
+
+    
+
     context = {
-      'form': ContacForm(request.POST),
+      'form': form,
     }
+
+    if form.is_valid():
+      form.save()
+
+      return redirect('contact:index')
+
 
     return render(
       request,
