@@ -6,13 +6,21 @@ class ContacForm(forms.ModelForm):
   first_name = forms.CharField(
     widget=forms.TextInput(
       attrs={
-        'class': 'classe-a classe-b',
         'placeholder': 'Escreva aqui'
       },
       label='Primeiro nome',
       help_text='Insira o primeiro nome'
     )
   )
+
+  picture = forms.ImageField(
+    widget=forms.FileInput(
+      attrs={
+        'accept': 'image/*'
+      }
+    )
+  )
+
   class Meta:
     model = models.Contact
     fields = (
@@ -22,6 +30,7 @@ class ContacForm(forms.ModelForm):
       'email',
       'description',
       'category',
+      'picture'
     )
     # widgets = {
     #   'first_name': forms.TextInput(
